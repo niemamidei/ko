@@ -1,8 +1,9 @@
 (function() {
 
-  var $ = require("jquery");
+  const $ = require("jquery");
   var game;
   var ui;
+
 
   var DateOptions = {hour: 'numeric',
                  minute: 'numeric',
@@ -241,6 +242,12 @@
       return bar;
   };
 
+  window.restart = function() {
+    if (confirm("Do you wish to restart the game? Progress will not be saved.")) {
+        window.location.reload();
+        return false;
+    }
+  };
 
   window.justLoaded = true;
   window.statusTab = "status";
