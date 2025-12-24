@@ -94,6 +94,8 @@ Q.justice_ability = 30;
 Q.nationalism = 40;
 Q.electoral_threshold = 1;
 Q.third_term = 0;
+Q.tax_rate = 0;
+Q.excise_rate = 0;
 
 Q.modern_exist = 0;
 Q.razem_exist = 0;
@@ -243,6 +245,20 @@ Q.foreign_minister = "Rau";
 Q.foreign_minister_party = "PiS";
 Q.tech_minister = "Buda";
 Q.tech_minister_party = "PiS";
+Q.in_leftist_coalition = 0;
+
+
+
+Q.in_grand_coalition = 0;
+Q.in_15X_coalition = 0;
+Q.in_progressive_coalition = 0;
+Q.in_two-way_coalition = 0;
+Q.in_right_wing_coalition = 0;
+Q.in_blue_coalition = 0;
+Q.in_far_right_coalition = 0;
+Q.in_pis_coalition = 0;
+Q.in_historical_coalition = 0;
+Q.in_libright_coalition = 0;
 
 // old stuff
 
