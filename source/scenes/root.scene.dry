@@ -95,6 +95,7 @@ Q.nationalism = 40;
 Q.electoral_threshold = 1;
 Q.third_term = 0;
 
+Q.modern_exist = 0;
 Q.razem_exist = 0;
 Q.kkp_exist = 0;
 Q.kkp_banned = 0;
@@ -116,15 +117,6 @@ Q.unemployed = 5;
 
 Q.classes = ['workers', 'entrepreneurs', 'farmers', 'pensioners', 'unemployed', 'students'];
 Q.parties = ['razem', 'nl', 'ko', 'modern', 'p2050', 'psl', 'pis','kwin','kkp', 'other'];
-
-// old stuff
-
-Q.budget = 4;
-// secret events...
-Q.unions_independent = 0;
-Q.centrists_resign = 0;
-Q.left_split = 0;
-Q.reformists_resigned = 0;
 
 Q.workers_razem = 0;
 Q.workers_nl = 10;
@@ -202,6 +194,46 @@ Q.pis_r = 51;
 Q.kwin_r = 2;
 Q.kkp_r = 1;
 Q.other_r = 3;
+
+// State of the government
+Q.president = "Duda";
+Q.chancellor = "Morawiecki";
+Q.chancellor_party = 'PiS';
+Q.razem_in_government = 0;
+Q.nl_in_government = 0;
+Q.ko_in_government = 0;
+Q.p2050_in_government = 0;
+Q.psl_in_government = 0;
+Q.pis_in_government = 1;
+Q.kwin_in_government = 0;
+Q.kkp_in_government = 0;
+
+Q.nl_dissent = 0;
+Q.psl_dissent = 0;
+Q.p2050_dissent = 0;
+Q.kwin_dissent = 0;
+Q.pis_dissent = 0;
+
+Q.old_razem_r = 1;
+Q.old_nl_r = 8;
+Q.old_ko_r = 28;
+Q.old_p2050_r = 1;
+Q.old_psl_r = 5;
+Q.old_pis_r = 51;
+Q.old_kwin_r = 2;
+Q.old_kkp_r = 1;
+Q.old_other_r = 3;
+
+// coalitions
+
+// old stuff
+
+Q.budget = 4;
+// secret events...
+Q.unions_independent = 0;
+Q.centrists_resign = 0;
+Q.left_split = 0;
+Q.reformists_resigned = 0;
 
 // have we discovered neorevisionism?
 Q.neorevisionism = 0;
@@ -438,20 +470,6 @@ Q.election_records = [];
 Q.party_support_records = [];
 // inflation and unemployment records
 Q.economic_records = [];
-
-
-// State of the government
-Q.president = "Hindenburg";
-// starting chancellor: Wilhelm Marx
-Q.chancellor = "Marx";
-Q.chancellor_party = 'Z';
-Q.spd_in_government = 0;
-Q.z_in_government = 1;
-Q.ddp_in_government = 0;
-Q.dvp_in_government = 1;
-Q.dnvp_in_government = 1;
-Q.kpd_in_government = 0;
-Q.nsdap_in_government = 0;
 
 Q.in_right_coalition = 0;
 // Weimar coalition = SPD + Z + DDP
