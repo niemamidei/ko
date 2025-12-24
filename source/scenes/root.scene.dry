@@ -195,6 +195,7 @@ Q.pis_r = 51;
 Q.kwin_r = 2;
 Q.kkp_r = 1;
 Q.other_r = 3;
+Q.td_r = 0;
 
 // State of the government
 Q.president = "Duda";
