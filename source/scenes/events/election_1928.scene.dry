@@ -125,6 +125,11 @@ if (Q.kkp_exist == 0)
     Q.kkp_r = 2
     Q.kwin_r -=2
 
+if (Q.td_exist == 1)
+    Q.td_r = Q.p2050_r + Q.psl_r
+    Q.p2050_r = Q.td_r * 0.5
+    Q.psl_r = Q.td_r * 0.5
+
 // coalitions
 Q.leftist_coalition = Q.ko_r + Q.nl_r + Q.razem_r;
 Q.democratic_coalition = Q.ko_r + Q.nl_r + Q.razem_r + Q.p2050_r + Q.psl_r;
