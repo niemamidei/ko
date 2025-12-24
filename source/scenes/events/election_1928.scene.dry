@@ -230,6 +230,42 @@ data = data.concat([
         "seats": Math.round(Q.nl_r*4.6),
     },
     {
+        "id": "ko",
+        "legend": "KO",
+        "name": "KO",
+        "seats": Math.round(Q.ko_r*4.6),
+    },
+    {
+        "id": "p2050",
+        "legend": "P2050",
+        "name": "P2050",
+        "seats": Math.round(Q.p2050_r*4.6),
+    },
+    {
+        "id": "psl",
+        "legend": "PSL",
+        "name": "PSL",
+        "seats": Math.round(Q.psl_r*4.6),
+    },
+    {
+        "id": "pis",
+        "legend": "PiS",
+        "name": "PiS",
+        "seats": Math.round(Q.pis_r*4.6),
+    },
+    {
+        "id": "kwin",
+        "legend": "KWiN",
+        "name": "KWiN",
+        "seats": Math.round(Q.kwin_r*4.6),
+    },
+    {
+        "id": "kkp",
+        "legend": "KKP",
+        "name": "KKP",
+        "seats": Math.round(Q.kkp_r*4.6),
+    },
+    {
         "id": "ddp",
         "legend": Q.ddp_name,
         "name": Q.ddp_name,
