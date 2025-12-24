@@ -225,12 +225,12 @@ Q.old_kkp_r = 1;
 Q.old_other_r = 3;
 
 // coalitions
-Q.leftist_coalition = 0;
+Q.centreleft_coalition = 0;
 Q.democratic_coalition = 0;
 Q.15X_coalition = 0;
 Q.progressive_coalition = 0;
 Q.two_way_coalition = 0;
-Q.right_wing_coalition = 0;
+Q.rightist_coalition = 0;
 Q.blue_coalition = 0;
 Q.far_right_coalition = 0;
 Q.historical_coalition = 0;
