@@ -225,38 +225,6 @@ Q.old_kkp_r = 1;
 Q.old_other_r = 3;
 
 // coalitions
-Q.in_leftist_coalition = 0;
-Q.in_grand_coalition = 0;
-Q.in_15X_coalition = 0;
-Q.in_progressive_coalition = 0;
-Q.in_two-way_coalition = 0;
-Q.in_right_wing_coalition = 0;
-Q.in_blue_coalition = 0;
-Q.in_far_right_coalition = 0;
-Q.in_pis_coalition = 0;
-Q.in_historical_coalition = 0;
-Q.in_libright_coalition = 0;
-
-Q.health_minister = 'Niedzielski';
-Q.health_minister_party = 'PiS';
-Q.finance_minister = 'Rzeczkowska';
-Q.finance_minister_party = 'I';
-Q.education_minister = 'Czarnek';
-Q.education_minister_party = 'PiS';
-Q.family_minister = 'Maląg';
-Q.family_minister_party = 'PiS';
-Q.justice_minister = 'Ziobro';
-Q.justice_minister_party = 'SP';
-Q.defense_minister = 'Błaszczak';
-Q.defense_minister_party = 'PiS';
-Q.infrastructure_minister = 'Adamczyk';
-Q.infrastructure_minister_party = 'PiS';
-Q.foreign_minister = 'Rau';
-Q.foreign_minister_party = 'PiS';
-Q.tech_minister = 'Buda';
-Q.tech_minister_party = 'PiS';
-Q.tax_rates = 0;
-Q.excise_tax_rates = 0;
 
 // old stuff
 
@@ -783,8 +751,7 @@ audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
-= 1928
+= 2023
 
 It is a bright time for German democracy. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality. 
 
-Now, the task of Social Democracy is to prepare for the next election. The bourgeois-right government of Wilhelm Marx is unpopular, and we stand to gain. Perhaps the next government will have a socialist majority.
