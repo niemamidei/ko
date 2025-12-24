@@ -256,7 +256,7 @@ Q.foreign_minister_party = 'PiS';
 Q.tech_minister = 'Buda';
 Q.tech_minister_party = 'PiS';
 
-tax_rates = 0;
+Q.tax_rates = 0;
 Q.excise_tax_rates = 0;
 
 // old stuff
@@ -716,7 +716,7 @@ Q.schumacher_advisor = 0; // Kurt Schumacher (post-1930)
 Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
 Q.radbruch_advisor = 0; // Gustav Radbruch
 Q.stampfer_advisor = 0; // Friedrich Stampfer
-
+!}
 set-bg: img/map_2.jpg
 new-page: true
 
