@@ -269,7 +269,7 @@ data = data.concat([
         "id": "other",
         "legend": "Other",
         "name": "Other",
-        "seats": Math.round(Q.others_r*5),
+        "seats": Math.round(Q.other_r*5),
     },
 ]);
 
