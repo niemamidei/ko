@@ -198,7 +198,7 @@ Q.other_r = 3;
 // State of the government
 Q.president = "Duda";
 Q.chancellor = "Morawiecki";
-Q.chancellor_party = "PiS";
+Q.chancellor_party = 'PiS';
 Q.razem_in_government = 0;
 Q.nl_in_government = 0;
 Q.ko_in_government = 0;
@@ -225,18 +225,6 @@ Q.old_kkp_r = 1;
 Q.old_other_r = 3;
 
 // coalitions
-Q.in_leftist_coalition = 0;
-Q.in_grand_coalition = 0;
-Q.in_15X_coalition = 0;
-Q.in_progressive_coalition = 0;
-Q.in_two-way_coalition = 0;
-Q.in_right_wing_coalition = 0;
-Q.in_blue_coalition = 0;
-Q.in_far_right_coalition = 0;
-Q.in_pis_coalition = 0;
-Q.in_historical_coalition = 0;
-Q.in_libright_coalition = 0;
-
 Q.health_minister = "Niedzielski";
 Q.health_minister_party = "PiS";
 Q.finance_minister = "Rzeczkowska";
@@ -255,9 +243,6 @@ Q.foreign_minister = "Rau";
 Q.foreign_minister_party = "PiS";
 Q.tech_minister = "Buda";
 Q.tech_minister_party = "PiS";
-
-tax_rates = 0;
-Q.excise_tax_rates = 0;
 
 // old stuff
 
@@ -536,6 +521,22 @@ Q.minority_government = 0;
 // ministries - which parties control the ministries?
 // starting with the 4th Marx cabinet https://en.wikipedia.org/wiki/Fourth_Marx_cabinet
 // is the agricultural ministry useful at all?
+Q.foreigny_minister = 'Streseman';
+Q.foreigny_minister_party = 'DVP';
+Q.interior_minister = 'von Keudell';
+Q.interior_minister_party = 'DNVP';
+Q.justicey_minister = 'Hergt';
+Q.justicey_minister_party = 'DNVP';
+Q.labor_minister = 'Brauns';
+Q.labor_minister_party = 'Z';
+Q.reichswehr_minister = 'Groener';
+Q.reichswehr_minister_party = 'I';
+Q.economic_minister = 'Curtius';
+Q.economic_minister_party = 'DVP';
+Q.financey_minister = 'Köhler';
+Q.financey_minister_party = 'Z';
+Q.agriculture_minister = 'Schiele';
+Q.agriculture_minister_party = 'DNVP';
 
 // Events: what has occurred?
 Q.panzerkreuzer_seen = 0;
@@ -587,7 +588,9 @@ Q.science = 0;
 Q.education_science = 0;
 
 // Tax rates relative to 1928 baseline
-
+Q.lower_tax_rates = 0;
+Q.upper_tax_rates = 0;
+Q.tariffs = 0;
 
 // our conduct in the government, and the conduct of our coalition opponents.
 // did the SPD vote against the previous government in a vote of no confidence?
@@ -720,13 +723,13 @@ Q.stampfer_advisor = 0; // Friedrich Stampfer
 set-bg: img/map_2.jpg
 new-page: true
 
-> *"I know the taste of victory, I know the bitterness of defeat, but I don't know the word surrender. We move forward!"*
+> *"Such a general development cannot be attributed to the false tactics of any single party or to the mistakes of individual leaders. On the contrary, the conduct of individual leaders is determined largely by the sentiments of the people as a whole. It would be erroneous, however, to regard the sentiments of the moment as reflecting the natural make-up and character of the people. They are merely the consequence of the special circumstances which have brought about this profound degradation of the entire nation."*
 
- - Donald Tusk, 2025
+ - Karl Kautsky, *Hitlerism and Social Democracy*, 1934
 
-This is a game of alternate history and future. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
+This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
 
-For more information on the politics and government of the Third Polish Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
+For more information on the politics and government of the German Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
 
 - @1928_easy: Begin (easy difficulty)
 - @1928_main: Begin (normal difficulty)
@@ -734,11 +737,11 @@ For more information on the politics and government of the Third Polish Republic
 - @1928_historical: Begin (historical mode)
 
 @1928_easy
-on-arrival: difficulty = -1; resources = 4; dues = 3;
+on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5;
 go-to: 1928_main
 
 @1928_hard
-on-arrival: difficulty = 1; resources = 0; dues = 1; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25;
+on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31; budget = 3;
 go-to: 1928_main
 
 @1928_historical
@@ -748,6 +751,15 @@ Q.difficulty = 2;
 Q.historical_mode = 1;
 Q.resources = 2;
 Q.dues = 1;
+Q.rb_strength = 2000;
+Q.reformist_dissent = 25;
+Q.left_dissent = 30;
+Q.labor_dissent = 25;
+Q.center_dissent = 25;
+Q.z_relation = 41;
+Q.kpd_relation = 16;
+Q.dvp_relation = 31;
+Q.budget = 2;
 this.state.disableSaves = true;
 !}
 go-to: 1928_main
@@ -759,4 +771,4 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 2023
 
-For 8 years the Law and Justice government ruled over Poland, but the tides are turning. The upcoming parliamentary election in October might be the last to break their power, we must make the most of it.
+It is a bright time for German democracy. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality. 
