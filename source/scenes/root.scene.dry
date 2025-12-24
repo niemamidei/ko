@@ -757,7 +757,7 @@ audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
-= 1928
+= 2023
 
 For 8 years the Law and Justice government ruled over Poland, but the tides are turning. The upcoming parliamentary election in October might be the last to break their power, we must make the most of it.
 
