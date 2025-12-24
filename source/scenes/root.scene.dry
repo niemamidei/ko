@@ -198,7 +198,7 @@ Q.other_r = 3;
 // State of the government
 Q.president = "Duda";
 Q.chancellor = "Morawiecki";
-Q.chancellor_party = 'PiS';
+Q.chancellor_party = "PiS";
 Q.razem_in_government = 0;
 Q.nl_in_government = 0;
 Q.ko_in_government = 0;
