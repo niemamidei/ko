@@ -720,6 +720,21 @@ Q.stampfer_advisor = 0; // Friedrich Stampfer
 set-bg: img/map_2.jpg
 new-page: true
 
+// removing it currently breaks the game
+Q.lower_tax_rates = 0;
+Q.upper_tax_rates = 0;
+Q.tariffs = 0;
+Q.interior_minister = 'von Keudell';
+Q.interior_minister_party = 'DNVP';
+Q.labor_minister = 'Brauns';
+Q.labor_minister_party = 'Z';
+Q.reichswehr_minister = 'Groener';
+Q.reichswehr_minister_party = 'I';
+Q.economic_minister = 'Curtius';
+Q.economic_minister_party = 'DVP';
+Q.agriculture_minister = 'Schiele';
+Q.agriculture_minister_party = 'DNVP';
+
 > *"I know the taste of victory, I know the bitterness of defeat, but I don't know the word surrender. We move forward!"*
 
  - Donald Tusk, 2025
