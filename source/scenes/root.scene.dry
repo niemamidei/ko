@@ -95,6 +95,7 @@ Q.nationalism = 40;
 Q.electoral_threshold = 1;
 Q.third_term = 0;
 
+Q.td_exist = 1;
 Q.modern_exist = 0;
 Q.razem_exist = 0;
 Q.kkp_exist = 0;
