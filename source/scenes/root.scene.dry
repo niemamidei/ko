@@ -225,16 +225,16 @@ Q.old_kkp_r = 1;
 Q.old_other_r = 3;
 
 // coalitions
-Q.centreleft_coalition = 0;
-Q.democratic_coalition = 0;
-Q.15X_coalition = 0;
-Q.progressive_coalition = 0;
-Q.two_way_coalition = 0;
-Q.rightist_coalition = 0;
-Q.blue_coalition = 0;
-Q.far_right_coalition = 0;
-Q.historical_coalition = 0;
-Q.libright_coalition = 0;
+Q.centrolew = 0;
+Q.democratic = 0;
+Q.15X = 0;
+Q.progressive = 0;
+Q.two_way = 0;
+Q.right_wing = 0;
+Q.blue = 0;
+Q.far_right = 0;
+Q.historical = 0;
+Q.libright = 0;
 
 Q.health_minister = "Niedzielski";
 Q.health_minister_party = "PiS";
