@@ -97,27 +97,24 @@ if (Q.pis_r >= Q.ko_r && Q.pis_r >= Q.kwin_r) {
 if (Q.kwin_r >= Q.ko_r && Q.kwin_r >= Q.pis_r) {
     Q.largest_party = 'KWiN';
 }
+if (Q.razem_exist = 0)
+    Q.razem_r = 1
+    Q.nl_r -=1
+if (Q.kkp_exist = 0)
+    Q.kkp_r = 2
+    Q.kwin_r -=2
 
 // coalitions
-Q.weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r - 3;
-Q.grand_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r;
-Q.bourgeois_coalition = Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
-Q.center_right_coalition = Q.z_r + Q.ddp_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
-Q.right_coalition = Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
-Q.far_right_coalition = Q.dnvp_r + Q.nsdap_r;
-Q.left_coalition = Q.spd_r + Q.kpd_r + Q.sapd_r;
-// this is an absurd concept lol
-Q.popular_front_coalition = Q.spd_r + Q.kpd_r + Q.z_r + Q.ddp_r - 3 + Q.sapd_r;
-Q.anti_democratic_coalition = Q.kpd_r + Q.nsdap_r + Q.dnvp_r;
-// aka everyone except nazi, kpd, dnvp
-Q.neo_weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
-// Hitler + Right-wing parties (only comes into effect if you've alienated Z too badly)
-Q.hitler_right_coalition = Q.z_r + Q.dnvp_r + Q.nsdap_r;
-// Progressive coalition isn't going to be implemented as a distinct coalition but it's the coalition that lets you pass improved women's rights/gay rights
-Q.progressive_coalition = Q.spd_r + Q.kpd_r + Q.ddp_r + Q.sapd_r;
-
-if (Q.kpd_relation >= 30) {
-    Q.weimar_coalition += Q.sapd_r;
+Q.leftist_coalition = Q.ko_r + Q.nl_r + Q.razem_r;
+Q.democratic_coalition = Q.ko_r + Q.nl_r + Q.razem_r + Q.p2050_r + Q.psl_r;
+Q.XV_X_coalition = Q.ko_r + Q.nl_r + Q.p2050_r + Q.psl_r;
+Q.progressive_coalition = Q.ko_r + Q.nl_r + Q.razem_r + Q.p2050_r;
+Q.two_way_coalition = Q.ko_r + Q.p2050_r + Q.psl_r;
+Q.right_wing_coalition = Q.pis_r + Q.kwin_r + Q.kkp_r;
+Q.blue_coalition = Q.pis_r + Q.kwin_r;
+Q.far_right_coalition = Q.pis_r + Q.kkp_r;
+Q.historical_coalition = Q.ko_r + Q.pis_r;
+Q.libright_coalition = Q.ko_r + Q.p2050_r + Q.psl_r + Q.kwin_r;
 }
 
 Q.leverage = Q.ko_r;
