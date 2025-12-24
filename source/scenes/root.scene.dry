@@ -126,7 +126,82 @@ Q.centrists_resign = 0;
 Q.left_split = 0;
 Q.reformists_resigned = 0;
 
-Q.workers_spd = 60;
+Q.workers_razem = 0;
+Q.workers_nl = 10;
+Q.workers_ko = 30;
+Q.workers_modern = 0;
+Q.workers_p2050 = 14;
+Q.workers_psl = 5;
+Q.workers_pis = 26;
+Q.workers_kwin = 10;
+Q.workers_kkp = 0;
+Q.workers_other = 5;
+
+Q.entrepreneurs_razem = 0;
+Q.entrepreneurs_nl = 7;
+Q.entrepreneurs_ko = 42;
+Q.entrepreneurs_modern = 0;
+Q.entrepreneurs_p2050 = 10;
+Q.entrepreneurs_psl = 6;
+Q.entrepreneurs_pis = 20;
+Q.entrepreneurs_kwin = 11;
+Q.entrepreneurs_kkp = 0;
+Q.entrepreneurs_other = 4;
+
+Q.farmers_razem = 0;
+Q.farmers_nl = 3;
+Q.farmers_ko = 9;
+Q.farmers_modern = 0;
+Q.farmers_p2050 = 2;
+Q.farmers_psl = 10;
+Q.farmers_pis = 66;
+Q.farmers_kwin = 5;
+Q.farmers_kkp = 0;
+Q.farmers_other = 2;
+
+Q.pensioners_razem = 0;
+Q.pensioners_nl = 6;
+Q.pensioners_ko = 31;
+Q.pensioners_modern = 0;
+Q.pensioners_p2050 = 3;
+Q.pensioners_psl = 5;
+Q.pensioners_pis = 53;
+Q.pensioners_kwin = 1;
+Q.pensioners_kkp = 0;
+Q.pensioners_other = 1;
+
+Q.students_razem = 0;
+Q.students_nl = 22;
+Q.students_ko = 31;
+Q.students_modern = 0;
+Q.students_p2050 = 15;
+Q.students_psl = 4;
+Q.students_pis = 11;
+Q.students_kwin = 13;
+Q.students_kkp = 0;
+Q.students_other = 4;
+
+Q.unemployed_razem = 0;
+Q.unemployed_nl = 8;
+Q.unemployed_ko = 21;
+Q.unemployed_modern = 0;
+Q.unemployed_p2050 = 9;
+Q.unemployed_psl = 3;
+Q.unemployed_pis = 45;
+Q.unemployed_kwin = 9;
+Q.unemployed_kkp = 0;
+Q.unemployed_other = 5;
+
+// sejm seats percent
+Q.razem_r = 1;
+Q.nl_r = 8;
+Q.ko_r = 28;
+Q.p2050_r = 1;
+Q.psl_r = 5;
+Q.pis_r = 51;
+Q.kwin_r = 2;
+Q.kkp_r = 1;
+Q.other_r = 3;
 
 // have we discovered neorevisionism?
 Q.neorevisionism = 0;
@@ -480,8 +555,6 @@ Q.education_science = 0;
 Q.lower_tax_rates = 0;
 Q.upper_tax_rates = 0;
 Q.tariffs = 0;
-
-Q.electoral_threshold = 0;
 
 // our conduct in the government, and the conduct of our coalition opponents.
 // did the SPD vote against the previous government in a vote of no confidence?
