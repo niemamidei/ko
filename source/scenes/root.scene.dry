@@ -94,8 +94,6 @@ Q.justice_ability = 30;
 Q.nationalism = 40;
 Q.electoral_threshold = 1;
 Q.third_term = 0;
-Q.tax_rate = 0;
-Q.excise_rate = 0;
 
 Q.modern_exist = 0;
 Q.razem_exist = 0;
@@ -245,20 +243,6 @@ Q.foreign_minister = "Rau";
 Q.foreign_minister_party = "PiS";
 Q.tech_minister = "Buda";
 Q.tech_minister_party = "PiS";
-Q.in_leftist_coalition = 0;
-
-
-
-Q.in_grand_coalition = 0;
-Q.in_15X_coalition = 0;
-Q.in_progressive_coalition = 0;
-Q.in_two-way_coalition = 0;
-Q.in_right_wing_coalition = 0;
-Q.in_blue_coalition = 0;
-Q.in_far_right_coalition = 0;
-Q.in_pis_coalition = 0;
-Q.in_historical_coalition = 0;
-Q.in_libright_coalition = 0;
 
 // old stuff
 
@@ -510,6 +494,7 @@ Q.in_right_coalition = 0;
 Q.in_weimar_coalition = 0;
 // Grand coalition = SPD + Z + BVP + DDP + DVP
 // also includes the "new grand coalition" of SPD + Z + BVP + DDP + DVP + Others
+Q.in_grand_coalition = 0;
 // Popular front = SPD + KPD + Z + DDP
 Q.in_popular_front = 0;
 // left coalition = SPD + KPD + left-splinters
@@ -738,11 +723,11 @@ Q.stampfer_advisor = 0; // Friedrich Stampfer
 set-bg: img/map_2.jpg
 new-page: true
 
-> *"Such a general development cannot be attributed to the false tactics of any single party or to the mistakes of individual leaders. On the contrary, the conduct of individual leaders is determined largely by the sentiments of the people as a whole. It would be erroneous, however, to regard the sentiments of the moment as reflecting the natural make-up and character of the people. They are merely the consequence of the special circumstances which have brought about this profound degradation of the entire nation."*
+> *"I know the taste of victory, I know the bitterness of defeat, but I don't know the word surrender. We move forward!"*
 
- - Karl Kautsky, *Hitlerism and Social Democracy*, 1934
+ - Donald Tusk, 2025
 
-This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
+This is a game of alternate history and future. While historical accuracy is a concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
 
 For more information on the politics and government of the Third Polish Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
 
@@ -752,11 +737,11 @@ For more information on the politics and government of the Third Polish Republic
 - @1928_historical: Begin (historical mode)
 
 @1928_easy
-on-arrival: difficulty = -1; resources = 4; dues = 3;
+on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5;
 go-to: 1928_main
 
 @1928_hard
-on-arrival: difficulty = 1; resources = 0; dues = 1;
+on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31; budget = 3;
 go-to: 1928_main
 
 @1928_historical
@@ -766,6 +751,15 @@ Q.difficulty = 2;
 Q.historical_mode = 1;
 Q.resources = 2;
 Q.dues = 1;
+Q.rb_strength = 2000;
+Q.reformist_dissent = 25;
+Q.left_dissent = 30;
+Q.labor_dissent = 25;
+Q.center_dissent = 25;
+Q.z_relation = 41;
+Q.kpd_relation = 16;
+Q.dvp_relation = 31;
+Q.budget = 2;
 this.state.disableSaves = true;
 !}
 go-to: 1928_main
@@ -777,4 +771,4 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 2023
 
-It is a bright time for German democracy. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality. 
+For 8 years the Law and Justice government ruled over Poland, but the tides are turning. The upcoming parliamentary election in October might be the last to break their power, we must make the most of it.
