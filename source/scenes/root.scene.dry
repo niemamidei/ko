@@ -6,7 +6,7 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 
-= Social Democracy: An Alternate History
+= In Our Hearts
 
 @start_menu_2
 
@@ -21,7 +21,7 @@ on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
-Q.year = 1928;
+Q.year = 2023;
 Q.month = 1;
 // how many actions have been taken this month?
 Q.month_actions = 0;
@@ -46,19 +46,67 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist'];
-// should this be normalized to 100%?
-Q.left_strength = 15;
-Q.left_dissent = 20;
-Q.center_strength = 30;
-Q.center_dissent = 0;
-Q.labor_strength = 25;
-Q.labor_dissent = 5;
-Q.reformist_strength = 25;
-Q.reformist_dissent = 5;
-Q.neorevisionist_strength = 5;
-Q.neorevisionist_dissent = 10;
+Q.factions = ['green', 'ipl', 'modern', 'po', 'right'];
+Q.green_strength = 3;
+Q.green_dissent = 0;
+Q.ipl_strength = 5;
+Q.ipl_dissent = 0;
+Q.modern_strength = 15;
+Q.modern_dissent = 0;
+Q.po_strength = 60;
+Q.po_dissent = 0;
+Q.right_strength = 17;
+Q.right_dissent = 0;
 
+// inter-party relations
+Q.razem_relation = 40;
+Q.nl_relation = 60;
+Q.p2050_relation = 75;
+Q.psl_relation = 65;
+Q.pis_relation = 20;
+Q.kwin_relation = 20;
+Q.kkp_relation = 0;
+Q.president_relation = 25;
+// whether or not the president can dismiss the government.
+Q.pres_enabled = 0;
+
+Q.nl_leader = "Czarzasty";
+Q.p2050_leader = "Hołownia";
+Q.psl_leader = "Kosiniak-Kamysz";
+Q.pis_leader = "Kaczyński";
+Q.kwin_leader = "Mentzen";
+
+// social media I guess
+Q.ko_strength = 100;
+Q.ko_activity = 70;
+Q.pis_strength = 30;
+Q.pis_activity = 30;
+Q.kwin_strength = 75;
+Q.kwin_activity = 80;
+Q.nl_strength = 20;
+Q.nl_activity = 50;
+Q.razem_strength = 10;
+Q.razem_activity = 60;
+Q.kkp_strength = 25;
+Q.kkp_activity = 60;
+
+Q.justice_ability = 30;
+Q.nationalism = 40;
+Q.electoral_threshold = 1;
+Q.third_term = 0;
+
+Q.kkp_banned = 0;
+Q.kwin_banned = 0;
+Q.pis_banned = 0;
+
+Q.gdp = 3400;
+Q.gdp_growth = 0;
+Q.debt = -1500;
+Q.deficit = -210;
+
+// old stuff
+
+Q.budget = 4;
 // secret events...
 Q.unions_independent = 0;
 Q.centrists_resign = 0;
@@ -99,28 +147,6 @@ Q.moderate_plan_support = 0;
 Q.moderate_plan_adopted = 0;
 
 // organizations
-
-// inter-party relations
-Q.z_relation = 50;
-Q.kpd_relation = 25;
-Q.ddp_relation = 60;
-Q.dvp_relation = 35;
-// DNVP and NSDAP are invariably hostile
-Q.DNVP_relation = 10;
-Q.NSDAP_relation = 0;
-
-Q.kpd_leader = "Thälmann";
-// alternative is the Conciliators as party leader
-Q.kpd_party_leader = "Thälmann";
-Q.z_leader = "Brüning";
-// party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the SPD.
-Q.z_party_leader = "Marx";
-Q.nsdap_leader = "Hitler";
-
-// hmm... maybe we can play nice with Hindenburg???
-Q.hindenburg_relation = 25;
-// whether or not hindenburg can dismiss the government.
-Q.hindenburg_enabled = 0;
 
 
 // Does the SPD lead in Prussia?
@@ -165,8 +191,6 @@ Q.reichswehr_loyalty = 0.2;
 
 // popular opinion
 // national ideology - on a binary scale
-// nationalism vs internationalism or pacifism or non-nationalism
-Q.nationalism = 60;
 // socialism vs capitalism
 Q.socialism = 40;
 // pro-republic vs anti-republic
@@ -175,7 +199,6 @@ Q.pro_republic = 59;
 Q.emergency_rule = 0;
 
 // minimum percentage of votes to be represented in the Reichstag
-Q.electoral_threshold = 0;
 // constitutional reform level
 Q.constitutional_reform = 0;
 // constructive vote of no confidence
@@ -191,8 +214,6 @@ Q.nsdap_banned = 0;
 // when coup_progress reaches 10 or capital_strike_progress reaches 10, there's a special event that launches the coup.
 Q.coup_progress = 0;
 Q.capital_strike_progress = 0;
-
-Q.budget = 4;
 
 // Proportion of different social groups
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
