@@ -106,16 +106,7 @@ if (Q.kkp_exist == 0)
     Q.kwin_r -=2
 
 // coalitions
-Q.leftist_coalition = Q.ko_r + Q.nl_r + Q.razem_r;
-Q.democratic_coalition = Q.ko_r + Q.nl_r + Q.razem_r + Q.p2050_r + Q.psl_r;
-Q.XV_X_coalition = Q.ko_r + Q.nl_r + Q.p2050_r + Q.psl_r;
-Q.progressive_coalition = Q.ko_r + Q.nl_r + Q.razem_r + Q.p2050_r;
-Q.two_way_coalition = Q.ko_r + Q.p2050_r + Q.psl_r;
-Q.right_wing_coalition = Q.pis_r + Q.kwin_r + Q.kkp_r;
-Q.blue_coalition = Q.pis_r + Q.kwin_r;
-Q.far_right_coalition = Q.pis_r + Q.kkp_r;
-Q.historical_coalition = Q.ko_r + Q.pis_r;
-Q.libright_coalition = Q.ko_r + Q.p2050_r + Q.psl_r + Q.kwin_r;
+
 }
 
 Q.leverage = Q.ko_r;
