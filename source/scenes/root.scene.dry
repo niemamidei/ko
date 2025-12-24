@@ -235,6 +235,18 @@ Q.blue_coalition = 0;
 Q.far_right_coalition = 0;
 Q.historical_coalition = 0;
 Q.libright_coalition = 0;
+
+Q.in_leftist_coalition = 0;
+Q.in_democratic_coalition = 0;
+Q.in_XV_X_coalition = 0;
+Q.in_progressive_coalition = 0;
+Q.in_two_way_coalition = 0;
+Q.in_right_wing_coalition = 0;
+Q.in_blue_coalition = 0;
+Q.in_far_right_coalition = 0;
+Q.in_historical_coalition = 0;
+Q.in_libright_coalition = 0;
+
 Q.health_minister = "Niedzielski";
 Q.health_minister_party = "PiS";
 Q.finance_minister = "Rzeczkowska";
