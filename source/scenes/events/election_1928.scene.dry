@@ -120,7 +120,7 @@ if (Q.kpd_relation >= 30) {
     Q.weimar_coalition += Q.sapd_r;
 }
 
-Q.leverage = Q.spd_r;
+Q.leverage = Q.ko_r;
 
 Q.grand_coalition_failed = 0;
 // Reset government and ministers... Based on Brüning's 1930 govt
