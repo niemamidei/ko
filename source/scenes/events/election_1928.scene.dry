@@ -269,7 +269,7 @@ data = data.concat([
         "id": "other",
         "legend": "Other",
         "name": "Other",
-        "seats": Math.round(Q.other_r*5),
+        "seats": Math.round(Q.others_r*5),
     },
 ]);
 
@@ -298,15 +298,25 @@ go-to: coalition_menu
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#720546'> </div> !} Razem: {!</td><td>!} [+ razem_r +]% {!</td><td>!} [+ str_change_razem +] {!</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#EC2546'> </div> !} NL: {!</td><td>!} [+ nl_r +]% {!</td><td>!} [+ str_change_nl +] {!</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#4CD3FF'> </div> !} KO: {!</td><td>!} [+ ko_r +]% {!</td><td>!} [+ str_change_ko +] {!</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#FAC400'> </div> !} P2050: {!</td><td>!} [+ p2050_r +]% {!</td><td>!} [+ str_change_p2050 +] {!</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#3CB63A'> </div> !} PSL: {!</td><td>!} [+ psl_r +]% {!</td><td>!} [+ str_change_psl +] {!</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#28367F'> </div> !} PiS: {!</td><td>!} [+ pis_r +]% {!</td><td>!} [+ str_change_pis +] {!</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#16294A'> </div> !} KWiN: {!</td><td>!} [+ kwin_r +]% {!</td><td>!} [+ str_change_kwin +] {!</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#A37911'> </div> !} KKP: {!</td><td>!} [+ kkp_r +]% {!</td><td>!} [+ str_change_kkp +] {!</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#A0A0A0'> </div> !} Others: {!</td><td>!} [+ other_r +]% {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
+
+[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ sapd_r +]% {!</td><td>!} [+ str_change_sapd +] {!</td></tr>!} ?]
+
+{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}KPD: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} BVP: {!</td><td>!} 3% {!</td><td>!} 0 {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ str_change_dvp +] {!</td></tr>!}
+ 
+{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} DNVP: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ str_change_dnvp +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ str_change_nsdap +] {!</td></tr>!}
 {!</table>!}
 
 **Potential coalitions:**
