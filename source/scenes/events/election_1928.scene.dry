@@ -120,10 +120,10 @@ if (Q.kwin_r >= Q.ko_r && Q.kwin_r >= Q.pis_r) {
 
 if (Q.razem_exist == 0)
     Q.razem_r = 1
-    Q.nl_r -=1
+    Q.nl_r -= 1
 if (Q.kkp_exist == 0)
     Q.kkp_r = 2
-    Q.kwin_r -=2
+    Q.kwin_r -= 2
 
 if (Q.td_exist == 1)
     Q.td_r = Q.p2050_votes + Q.psl_votes
