@@ -206,15 +206,23 @@ Q.election_records.push(election_result);
 !}
 on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and nsdap_r >= 15)
 on-display: {!
-data = [{
-    
-data = data.concat([
+data = [
     {
         "id": "razem",
         "legend": "Razem",
         "name": "Razem",
         "seats": Math.round(Q.razem_r*4.6),
-    },
+    }
+];
+if (Q.sapd_formed && Q.sapd_r) {
+    data.push({
+            "id": "sapd",
+            "legend": "SAPD",
+            "name": "SAPD",
+            "seats": Math.round(Q.sapd_r*5),
+            });
+}
+data = data.concat([
     {
         "id": "nl",
         "legend": "NL",
