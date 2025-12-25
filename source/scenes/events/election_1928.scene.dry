@@ -88,14 +88,14 @@ if (Q.electoral_threshold && Q.electoral_threshold > 0) {
 // get change arrows and signs
 
 
-// The largest party can only be the NSDAP or the SPD.
-Q.largest_party = 'SPD';
-if (Q.nsdap_r >= Q.spd_r && Q.nsdap_r >= Q.kpd_r) {
-    Q.largest_party = 'NSDAP';
+// The largest party can only be the KO, KWiN or PiS.
+Q.largest_party = 'KO';
+if (Q.pis_r >= Q.ko_r && Q.pis_r >= Q.kwin_r) {
+    Q.largest_party = 'PiS';
 }
 
-if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
-    Q.largest_party = 'KPD';
+if (Q.kwin_r >= Q.ko_r && Q.kwin_r >= Q.pis_r) {
+    Q.largest_party = 'KWiN';
 }
 
 // coalitions
@@ -116,11 +116,23 @@ Q.hitler_right_coalition = Q.z_r + Q.dnvp_r + Q.nsdap_r;
 // Progressive coalition isn't going to be implemented as a distinct coalition but it's the coalition that lets you pass improved women's rights/gay rights
 Q.progressive_coalition = Q.spd_r + Q.kpd_r + Q.ddp_r + Q.sapd_r;
 
+Q.leftist_coalition = Q.ko_r + Q.nl_r + Q.razem_r;
+Q.democratic_coalition = Q.ko_r + Q.nl_r + Q.razem_r + Q.p2050_r + Q.psl_r;
+Q.XV_X_coalition = Q.ko_r + Q.nl_r + Q.p2050_r + Q.psl_r;
+Q.progressive_coalition = Q.ko_r + Q.nl_r + Q.razem_r + Q.p2050_r;
+Q.two_way_coalition = Q.ko_r + Q.p2050_r + Q.psl_r;
+Q.right_wing_coalition = Q.pis_r + Q.kwin_r + Q.kkp_r;
+Q.blue_coalition = Q.pis_r + Q.kwin_r;
+Q.far_right_coalition = Q.pis_r + Q.kkp_r;
+Q.historical_coalition = Q.ko_r + Q.pis_r;
+Q.libright_coalition = Q.ko_r + Q.p2050_r + Q.psl_r + Q.kwin_r;
+
+
 if (Q.kpd_relation >= 30) {
     Q.weimar_coalition += Q.sapd_r;
 }
 
-Q.leverage = Q.spd_r;
+Q.leverage = Q.ko_r;
 
 Q.grand_coalition_failed = 0;
 // Reset government and ministers... Based on Brüning's 1930 govt
@@ -185,10 +197,10 @@ on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and nsdap_r >= 15)
 on-display: {!
 data = [
     {
-        "id": "kpd",
-        "legend": "KPD",
-        "name": "KPD",
-        "seats": Math.round(Q.kpd_r*5),
+        "id": "razem",
+        "legend": "Razem",
+        "name": "Razem",
+        "seats": Math.round(Q.razem_r*4.6),
     }
 ];
 if (Q.sapd_formed && Q.sapd_r) {
@@ -207,46 +219,52 @@ data = data.concat([
         "seats": Math.round(Q.spd_r*5),
     },
     {
-        "id": "ddp",
-        "legend": Q.ddp_name,
-        "name": Q.ddp_name,
-        "seats": Math.round(Q.ddp_r*5),
+        "id": "nl",
+        "legend": "NL",
+        "name": "NL",
+        "seats": Math.round(Q.nl_r*4.6),
     },
     {
-        "id": "z",
-        "legend": "Center",
-        "name": "Center",
-        "seats": Math.round((Q.z_r - 3)*5),
+        "id": "ko",
+        "legend": "KO",
+        "name": "KO",
+        "seats": Math.round(Q.ko_r*4.6),
     },
     {
-        "id": "bvp",
-        "legend": "BVP",
-        "name": "BVP",
-        "seats": Math.round(3*5),
+        "id": "p2050",
+        "legend": "P2050",
+        "name": "P2050",
+        "seats": Math.round(Q.p2050_r*4.6),
     },
     {
-        "id": "dvp",
-        "legend": "DVP",
-        "name": "DVP",
-        "seats": Math.round(Q.dvp_r*5),
+        "id": "psl",
+        "legend": "PSL",
+        "name": "PSL",
+        "seats": Math.round(Q.psl_r*4.6),
+    },
+    {
+        "id": "pis",
+        "legend": "PiS",
+        "name": "PiS",
+        "seats": Math.round(Q.pis_r*4.6),
+    },
+    {
+        "id": "kwin",
+        "legend": "KWiN",
+        "name": "KWiN",
+        "seats": Math.round(Q.kwin_r*4.6),
+    },
+    {
+        "id": "kkp",
+        "legend": "KKP",
+        "name": "KKP",
+        "seats": Math.round(Q.kkp_r*4.6),
     },
     {
         "id": "other",
         "legend": "Other",
         "name": "Other",
         "seats": Math.round(Q.other_r*5),
-    },
-    {
-        "id": "dnvp",
-        "legend": "DNVP",
-        "name": "DNVP",
-        "seats": Math.round(Q.dnvp_r*5),
-    },
-    {
-        "id": "nsdap",
-        "legend": "NSDAP",
-        "name": "NSDAP",
-        "seats": Math.round(Q.nsdap_r*5),
     },
 ]);
 
@@ -275,26 +293,21 @@ go-to: coalition_menu
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#870F57'> </div> !}Razem: {!</td><td>!} [+ razem_r +]% {!</td><td>!} [+ str_change_razem +] {!</td></tr>!}
 
-[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ sapd_r +]% {!</td><td>!} [+ str_change_sapd +] {!</td></tr>!} ?]
+{!<tr><td><div class="box" style='background-color:#D8051B'> </div> !}NL: {!</td><td>!} [+ nl_r +]% {!</td><td>!} [+ str_change_nl +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}KPD: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#2E80E1; outline: 2px; outline-style: solid;'> </div> !} **KO:** {!</td><td>!} **[+ ko_r +]%** {!</td><td>!} **[+ str_change_ko +]** {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#FAC400'> </div> !}P2050: {!</td><td>!} [+ p2050_r +]% {!</td><td>!} [+ str_change_p2050 +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#3CB63A'> </div> !}PSL: {!</td><td>!} [+ psl_r +]% {!</td><td>!} [+ str_change_psl +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} BVP: {!</td><td>!} 3% {!</td><td>!} 0 {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#28377C'> </div> !}PiS: {!</td><td>!} [+ pis_r +]% {!</td><td>!} [+ str_change_pis +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ str_change_dvp +] {!</td></tr>!}
- 
-{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#0A2345'> </div> !}KWiN: {!</td><td>!} [+ kwin_r +]% {!</td><td>!} [+ str_change_kwin +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} DNVP: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ str_change_dnvp +] {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ str_change_nsdap +] {!</td></tr>!}
-{!</table>!}
+{!<tr><td><div class="box" style='background-color:#A47A12'> </div> !}KKP: {!</td><td>!} [+ kkp_r +]% {!</td><td>!} [+ str_change_kkp +] {!</td></tr>!}
 
 **Potential coalitions:**
 
