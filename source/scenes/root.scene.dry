@@ -109,15 +109,15 @@ Q.debt = -1500;
 Q.deficit = -210;
 Q.inflation = 6;
 
+Q.classes = ['workers', 'entrepreneurs', 'farmers', 'pensioners', 'unemployed', 'students'];
+Q.parties = ['razem', 'nl', 'ko', 'modern', 'p2050', 'psl', 'pis','kwin','kkp', 'other'];
+
 Q.workers = 42;
 Q.entrepreneurs = 12;
 Q.farmers = 3;
 Q.pensioners = 32;
 Q.students = 6;
 Q.unemployed = 5;
-
-Q.classes = ['workers', 'entrepreneurs', 'farmers', 'pensioners', 'unemployed', 'students'];
-Q.parties = ['razem', 'nl', 'ko', 'modern', 'p2050', 'psl', 'pis','kwin','kkp', 'other'];
 
 Q.workers_razem = 0;
 Q.workers_nl = 10;
