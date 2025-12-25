@@ -1,4 +1,4 @@
-title: Reichstag Elections
+title: Parliamentary Elections
 new-page: true
 tags: event
 priority: -1
@@ -202,7 +202,7 @@ data = [
         "name": "Razem",
         "seats": Math.round(Q.razem_r*5),
     }
-],
+];
     {
         "id": "nl",
         "legend": "NL",
