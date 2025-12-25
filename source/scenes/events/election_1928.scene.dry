@@ -1,4 +1,4 @@
-title: Parliamentary Elections
+title: Reichstag Elections
 new-page: true
 tags: event
 priority: -1
@@ -202,7 +202,22 @@ data = [
         "name": "Razem",
         "seats": Math.round(Q.razem_r*5),
     }
-],
+];
+if (Q.sapd_formed && Q.sapd_r) {
+    data.push({
+            "id": "sapd",
+            "legend": "SAPD",
+            "name": "SAPD",
+            "seats": Math.round(Q.sapd_r*5),
+            });
+}
+data = data.concat([
+    {
+        "id": "spd",
+        "legend": "SPD",
+        "name": "SPD",
+        "seats": Math.round(Q.spd_r*5),
+    },
     {
         "id": "nl",
         "legend": "NL",
