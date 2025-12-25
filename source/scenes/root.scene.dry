@@ -92,7 +92,7 @@ Q.kkp_activity = 60;
 
 Q.justice_ability = 30;
 Q.nationalism = 40;
-Q.electoral_threshold = 1;
+Q.electoral_threshold = 5;
 Q.third_term = 0;
 
 Q.td_exist = 1;
