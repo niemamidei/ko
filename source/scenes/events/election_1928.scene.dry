@@ -87,6 +87,12 @@ if (Q.electoral_threshold && Q.electoral_threshold > 0) {
 
 // get change arrows and signs
 
+if (Q.td_exist == 1) {
+    Q.td_r = Q.p2050_r + Q.psl_r
+    Q.p2050_r = Q.td_r * 0.5
+    Q.psl_r = Q.td_r * 0.5
+}
+
 
 // The largest party can only be the KO, KWiN or PiS.
 Q.largest_party = 'KO';
