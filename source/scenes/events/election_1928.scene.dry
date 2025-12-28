@@ -72,11 +72,11 @@ if (Q.td_votes >=8) {
     Q.psl_r = Q.td_votes * 0.5
     }
 }
-if (razem_exist == 0) {
+if (Q.razem_exist == 0) {
     razem_r = 0.3 * nl_r
     nl_r -= 0.3 * nl_r
 }
-if (kkp_exist == 0) {
+if (Q.kkp_exist == 0) {
     kkp_r = 0.3 * kwin_r
     kwin_r -= 0.3 * kwin_r
 }
