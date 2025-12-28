@@ -64,6 +64,14 @@ for (var party of Q.parties) {
     var sign = Q['change_' + party + '_r'] > 0 ? '+'  : '';
     Q['str_change_' + party] = sign + Q['change_' + party + '_r'];//.toFixed(1);
 }
+if (Q.td_exist == 1) {
+    Q.td_votes = Q.p2050_votes + Q.psl_votes
+
+if (Q.td_votes >=8) {
+    Q.p2050_r = Q.td_votes * 0.5
+    Q.psl_r = Q.td_votes * 0.5
+    }
+}
 // calculate new party sum if electoral reform
 if (Q.electoral_threshold && Q.electoral_threshold > 0) {
     for (var party of Q.parties) {
@@ -86,12 +94,6 @@ if (Q.electoral_threshold && Q.electoral_threshold > 0) {
 }
 
 // get change arrows and signs
-
-if (Q.td_exist == 1) {
-    Q.td_r = Q.p2050_r + Q.psl_r
-    Q.p2050_r = Q.td_r * 0.5
-    Q.psl_r = Q.td_r * 0.5
-}
 
 
 // The largest party can only be the KO, KWiN or PiS.
