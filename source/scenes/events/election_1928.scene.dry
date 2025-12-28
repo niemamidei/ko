@@ -73,12 +73,12 @@ if (Q.td_votes >=8) {
     }
 }
 if (Q.razem_exist == 0) {
-    razem_r = 0.3 * nl_r
-    nl_r -= 0.3 * nl_r
+    Q.razem_r = 0.3 * Q.nl_r
+    Q.nl_r -= 0.3 * Q.nl_r
 }
 if (Q.kkp_exist == 0) {
-    kkp_r = 0.3 * kwin_r
-    kwin_r -= 0.3 * kwin_r
+    Q.kkp_r = 0.3 * Q.kwin_r
+    Q.kwin_r -= 0.3 * Q.kwin_r
 }
 // calculate new party sum if electoral reform
 if (Q.electoral_threshold && Q.electoral_threshold > 0) {
