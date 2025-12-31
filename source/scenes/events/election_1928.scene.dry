@@ -325,7 +325,7 @@ There are some potential coalition arrangements.
 
 @coalition_menu
 
-- @spd_majority
+- @ko_majority
 - @weimar_coalition
 - @grand_coalition
 - @new_grand_coalition
@@ -338,6 +338,39 @@ There are some potential coalition arrangements.
 - @right_coalition
 
 # TODO: black-brown coalition
+
+@ko_majority
+title: KO majority alone
+subtitle: KO: [+ ko_r +]%
+view-if: ko_r >= 50
+on-arrival: chancellor = "Empty"; chancellor_party = "KO"; ko_in_government = 1; health_minister = "Leszczyna"; health_minister_party = "KO"; finance_minister = "Domański"; finance_minister_party = "KO"; education_minister = "Nowacka"; education_minister_party = "KO"; family_minister = "Gajewska"; family_minister_party = "KO"; justice_minister = "Bodnar"; justice_minister_party = "KO"; defense_minister = "Tomczyk"; defense_minister_party = "KO"; infrastructure_minister = "Marchewka"; infrastructure_minister_party = "KO"; foreign_minister = "Sikorski"; foreign_minister_party = "KO"; tech_minister = "Jaros"; tech_minister_party = "KO";
+achievement: majority_party
+
+Finally, the Civic Coalition can govern alone! Our long campaign of electioneering has paid off. We do not need to worry about other parties; anything is possible. 
+
+Who should be chancellor?
+
+- @tusk_majority_chancellor: Donald Tusk for Prime Minister.
+- @sikorski_majority_chancellor: Radosław Sikorski for Prime Minister.
+- @trzaskowski_majority_chancellor: Rafał Trzaskowski for Prime Minister.
+
+@tusk_majority_chancellor
+view-if: president != "Tusk"
+on-arrival: chancellor = "Tusk"
+
+Donald Tusk has become prime minister of KO majority.
+
+@sikorski_majority_chancellor
+view-if: president != "Sikorski"
+on-arrival: chancellor = "Sikorski"
+
+Radosław Sikorski has become prime minister of KO majority.
+
+@trzaskowski_majority_chancellor
+view-if: president != "Trzaskowski"
+on-arrival: chancellor = "Trzaskowski"
+
+Rafał Trzaskowski has become prime minister of KO majority.
 
 
 @popular_front_coalition
@@ -739,49 +772,6 @@ There is no path to a majority government for now. The scheming around President
 - @hitler_takes_power: What now?
 
 # if NSDAP is largest party and Hindenburg is president, then Hindenburg appoints Hitler chancellor.
-
-@spd_majority
-title: SPD majority alone
-subtitle: SPD: [+ spd_r +]%
-view-if: spd_r >= 50
-on-arrival: chancellor = "Empty"; chancellor_party = "SPD"; spd_in_government = 1; in_spd_majority = 1; pro_republic += 5; foreign_minister_party = "SPD"; foreign_minister = "Breitscheid"; interior_minister_party = "SPD"; interior_minister = "Severing"; justice_minister_party = "SPD"; justice_minister = "Radbruch"; labor_minister_party = "SPD"; labor_minister = "Wissell"; reichswehr_minister_party = "SPD"; reichswehr_minister = "Leber"; economic_minister_party = "SPD"; economic_minister = "Schmidt"; finance_minister_party = "SPD"; finance_minister = "Hilferding"; agriculture_minister_party = "SPD"; agriculture_minister = "Baade"; reichswehr_loyalty -= 0.05; 
-achievement: majority_party
-
-Finally, the SPD can govern alone! Our long campaign of electioneering has paid off. We do not need to worry about coalition government; anything is possible. 
-
-Who should be chancellor?
-
-- @braun_majority_chancellor: Otto Braun for Chancellor.
-- @breitscheid_majority_chancellor: Rudolf Breitscheid for Chancellor.
-- @muller_majority_chancellor: Hermann Müller for Chancellor.
-- @wels_majority_chancellor: Otto Wels for Chancellor.
-
-@braun_majority_chancellor
-view-if: not historical_mode or not spd_prussia
-on-arrival: chancellor = "Braun"
-
-[? if president == "Braun": Our experts have checked the constitution, and have discovered that there is no specific prohibition against the Chancellor also being the President (the President may not be a member of the Reichstag; there is no law saying that the Chancellor must be a member of the Reichstag). Thus, we have Chancellor-President Otto Braun. ?]
-[? if president != "Braun": Otto Braun has become chancellor of the SPD majority. ?]
-
-@breitscheid_majority_chancellor
-on-arrival: chancellor = "Breitscheid"
-
-Rudolf Breitscheid has become chancellor of the SPD majority.
-
-@muller_majority_chancellor
-view-if: muller_dead = 0
-on-arrival: chancellor = "Müller"
-
-Hermann Müller has become chancellor of the SPD majority.
-
-@wels_majority_chancellor
-view-if: muller_dead = 1
-on-arrival: chancellor = "Wels"
-
-Otto Wels has become chancellor of the SPD majority.
-
-# TODO: Otto Wels should be able to be chancellor of a Grand Coalition, Weimar Coalition, or SPD majority after Müller dies.
-
 
 @brauns_dilemma
 title: There is no clear governing majority.
