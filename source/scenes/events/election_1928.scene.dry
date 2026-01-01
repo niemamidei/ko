@@ -366,6 +366,7 @@ Who should be chancellor?
 @leftist_coalition
 title: We can form a Left Wing Coalition.
 subtitle: KO + NL + Razem ([+ leftist_coalition +]%)
+unavailable-subtitle: KO + NL + Razem ([+ leftist_coalition +]%) - [? if razem_relation < 30: We do not have good enough relations with the Together Party. ?] [? if nl_relation < 30: We do not have good enough relations with the New Left. ?]
 view-if: leftist_coalition >= 50
 choose-if: razem_relation >= 30 and nl_relation >= 30
 on-arrival: leverage += 15; ko_in_government = 1; razem_in_government = 1; nl_in_government = 1; health_minister = "Zawisza"; health_minister_party = "Razem"; finance_minister = "Szlinder"; finance_minister_party = "Razem"; education_minister = "Kotula"; education_minister_party = "NL"; family_minister = "Dziemanowicz-Bąk"; family_minister_party = "NL"; justice_minister = "Żukowska"; justice_minister_party = "NL"; defense_minister = "Tomaszewski"; defense_minister_party = "NL"; infrastructure_minister = "Stożek"; infrastructure_minister_party = "Razem"; foreign_minister = "Konieczny"; foreign_minister_party = "Razem"; tech_minister = "Gawkowski"; tech_minister_party = "NL";
