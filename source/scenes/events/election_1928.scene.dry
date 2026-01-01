@@ -1279,7 +1279,7 @@ Rafał Trzaskowski has become prime minister. This will get us more support from
 @czarzasty
 title: Włodzimierz Czarzasty becomes Prime Minister.
 subtitle: This would be very unusual, the New Left is a small party and selecting a former PZPR member for priemership will backfire.
-view-if: president != "Czarzasty"; nl_in_government == 1
+view-if: president != "Czarzasty" and nl_in_government == 1
 on-arrival: chancellor = "Czarzasty"; chancellor_party = "NL"
 go-to: ministries
 
