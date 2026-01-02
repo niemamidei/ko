@@ -243,6 +243,8 @@ Q.in_blue_coalition = 0;
 Q.in_far_right_coalition = 0;
 Q.in_historical_coalition = 0;
 Q.in_libright_coalition = 0;
+Q.in_pis_majority = 0;
+Q.in_ko_majority = 0;
 
 Q.health_minister = "Niedzielski";
 Q.health_minister_party = "PiS";
