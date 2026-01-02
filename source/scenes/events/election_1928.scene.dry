@@ -338,6 +338,7 @@ There are some potential coalition arrangements.
 - @democratic_coalition
 - @october_coalition
 - @progressive_coalition
+- @two_way_coalition
 - @weimar_coalition
 - @grand_coalition
 - @new_grand_coalition
@@ -438,6 +439,24 @@ Who should be the chancellor?
 - @tusk
 - @czarzasty
 - @holownia
+
+@two_way_coalition
+title: We can form a coalition with the People's Party and Poland 2050.
+subtitle: KO + P2050 + PSL ([+ two_way_coalition +]%)
+unavailable-subtitle: KO + P2050 + PSL ([+ two_way_coalition +]%) - [? if p2050_relation < 30: We do not have good enough relations with Poland 2050. ?] [? if psl_relation < 30: We do not have good enough relations with the People's Party. ?]
+view-if: two_way_coalition >= 50
+choose-if: p2050_relation >= 30 and psl_relation >= 30
+on-arrival: leverage += 20; ko_in_government = 1; p2050_in_government = 1; psl_in_government = 1; health_minister = "Romowicz"; health_minister_party = "P2050"; finance_minister = "Sitnik"; finance_minister_party = "P2050"; education_minister = "Mucha"; education_minister_party = "P2050"; family_minister = "Porowska"; family_minister_party = "P2050"; justice_minister = "Zych"; justice_minister_party = "PSL"; defense_minister = "Kosiniak-Kamysz"; defense_minister_party = "PSL"; infrastructure_minister = "Klimczak"; infrastructure_minister_party = "PSL"; foreign_minister = "Pełczyńska-Nałęcz"; foreign_minister_party = "P2050"; tech_minister = "Gramatyka"; tech_minister_party = "P2050";
+
+We have enough votes to form a two-way coalition consisting of People's Party, Poland 2050 and Civic Coalition.
+
+Who should be the chancellor?
+
+- @trzaskowski
+- @sikorski
+- @tusk
+- @holownia
+- @kosiniak
 
 @temp
 title: Rudolf Breitscheid for Chancellor
