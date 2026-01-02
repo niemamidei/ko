@@ -364,14 +364,14 @@ Who should be chancellor?
 - @trzaskowski: Rafał Trzaskowski for Prime Minister.
 
 @leftist_coalition
-title: We can form a Left Wing Coalition.
-subtitle: KO + NL + Razem ([+ leftist_coalition +]%)
+title: We can form a Left-wing coalition.
+subtitle: Razem + NL + KO ([+ leftist_coalition +]%)
 unavailable-subtitle: KO + NL + Razem ([+ leftist_coalition +]%) - [? if razem_relation < 30: We do not have good enough relations with the Together Party. ?] [? if nl_relation < 30: We do not have good enough relations with the New Left. ?]
 view-if: leftist_coalition >= 50
 choose-if: razem_relation >= 30 and nl_relation >= 30
 on-arrival: leverage += 15; ko_in_government = 1; razem_in_government = 1; nl_in_government = 1; health_minister = "Zawisza"; health_minister_party = "Razem"; finance_minister = "Szlinder"; finance_minister_party = "Razem"; education_minister = "Kotula"; education_minister_party = "NL"; family_minister = "Dziemanowicz-Bąk"; family_minister_party = "NL"; justice_minister = "Żukowska"; justice_minister_party = "NL"; defense_minister = "Tomaszewski"; defense_minister_party = "NL"; infrastructure_minister = "Stożek"; infrastructure_minister_party = "Razem"; foreign_minister = "Konieczny"; foreign_minister_party = "Razem"; tech_minister = "Gawkowski"; tech_minister_party = "NL";
 
-We have enough votes to form a left wing government consisting of the KO, New Left and Razem.
+We have enough votes to form a left-wing government consisting of the KO, New Left and Razem.
 
 Who should be the chancellor?
 
@@ -379,6 +379,25 @@ Who should be the chancellor?
 - @sikorski
 - @tusk
 - @czarzasty
+
+@democratic_coalition
+title: We can form a coalition of all parties open to cooperation.
+subtitle: Razem + NL + KO + P2050 + PSL ([+ democratic_coalition +]%)
+unavailable-subtitle: Razem + NL + KO + P2050 + PSL ([+ democratic_coalition +]%) - [? if razem_relation < 50: We do not have good enough relations with the Together Party. ?] [? if nl_relation < 40: We do not have good enough relations with the New Left. ?] [? if p2050_relation < 30: We do not have good enough relations with Poland 2050. ?] [? if psl_relation < 50: We do not have good enough relations with the People's Party. ?]
+view-if: leftist_coalition >= 50
+choose-if: razem_relation >= 50 and nl_relation >= 40 and p2050_relation >= 30 and psl_relation >= 50
+on-arrival: leverage += 5; ko_in_government = 1; razem_in_government = 1; nl_in_government = 1; p2050_in_government = 1; psl_in_government = 1; health_minister = "Zawisza"; health_minister_party = "Razem"; finance_minister = "Sitnik"; finance_minister_party = "P2050"; education_minister = "Kotula"; education_minister_party = "NL"; family_minister = "Dziemanowicz-Bąk"; family_minister_party = "NL"; justice_minister = "Zych"; justice_minister_party = "PSL"; defense_minister = "Kosiniak-Kamysz"; defense_minister_party = "PSL"; infrastructure_minister = "Stożek"; infrastructure_minister_party = "Razem"; foreign_minister = "Pełczyńska-Nałęcz"; foreign_minister_party = "P2050"; tech_minister = "Gramatyka"; tech_minister_party = "P2050";
+
+We have enough votes to form a big tent government consisting of KO, Poland 2050, People's Party, New Left and Razem.
+
+Who should be the chancellor?
+
+- @trzaskowski
+- @sikorski
+- @tusk
+- @czarzasty
+- @holownia
+- @kosiniak
 
 @temp
 title: Rudolf Breitscheid for Chancellor
@@ -1278,13 +1297,33 @@ on-arrival: chancellor = "Trzaskowski"
 Rafał Trzaskowski has become prime minister. This will get us more support from the left-wing parties.
 
 @czarzasty
-title: Włodzimierz Czarzasty becomes Prime Minister.
+title: Włodzimierz Czarzasty of the New Left becomes Prime Minister.
 subtitle: This would be very unusual, the New Left is a small party and selecting a former PZPR member for priemership will backfire.
 view-if: president != "Czarzasty" and nl_in_government == 1
 on-arrival: chancellor = "Czarzasty"; chancellor_party = "NL"
 go-to: ministries
 
 Włodzimierz Czarzasty has become prime minister. This will get us more leverage in the coalition, though we might lose support from our more centrist voters.
+
+@holownia
+title: Szymon Hołownia of Poland 2050 becomes Prime Minister.
+subtitle: Whilst coalitions in which the prime minister is not from the largest party aren't common in Polish politics, Szymon Hołownia can be seen as a compromise candidate and might persuade right-wing voters.
+view-if: president != "Hołownia" and p2050_in_government == 1
+on-arrival: chancellor = "Hołownia"; chancellor_party = "P2050"
+go-to: ministries
+
+Szymon Hołownia has become prime minister. This will immensely help his movement, hindering our political opponents, but also taking some of our support.
+
+@kosiniak
+title: Władysław Kosiniak-Kamysz becomes Prime Minister.
+subtitle: This move will dismay our left-wing but it may give us more leverage in government.
+view-if: president != "Kosiniak-Kamysz" and psl_in_government == 1
+choose-if: razem_in_government == 0 or razem_relation >= 80
+unavailable-subtitle: The Together Party would not allow us to form a government with such a rightist politician.
+on-arrival: chancellor = "Kosiniak-Kamysz"; chancellor_party = "PSL"
+go-to: ministries
+
+Władysław Kosiniak-Kamysz has become prime minister. This will get us more leverage in the coalition, though we will lose support from our left-wing voters.
 
 @ministries
 
