@@ -337,6 +337,7 @@ There are some potential coalition arrangements.
 - @leftist_coalition
 - @democratic_coalition
 - @october_coalition
+- @progressive_coalition
 - @weimar_coalition
 - @grand_coalition
 - @new_grand_coalition
@@ -419,6 +420,24 @@ Who should be the chancellor?
 - @czarzasty
 - @holownia
 - @kosiniak
+
+@progressive_coalition
+title: We can form a coalition of progressive parties.
+subtitle: Razem + NL + KO + P2050 ([+ progressive_coalition +]%)
+unavailable-subtitle: Razem + NL + KO + P2050 ([+ progressive_coalition +]%) - [? if razem_relation < 40: We do not have good enough relations with the Together Party. ?] [? if nl_relation < 30: We do not have good enough relations with the New Left. ?] [? if p2050_relation < 30: We do not have good enough relations with Poland 2050. ?]
+view-if: progressive_coalition >= 50
+choose-if: razem_relation >= 40 and nl_relation >= 30 and p2050_relation >= 30
+on-arrival: leverage += 10; ko_in_government = 1; razem_in_government = 1; nl_in_government = 1; p2050_in_government = 1; health_minister = "Zawisza"; health_minister_party = "Razem"; finance_minister = "Sitnik"; finance_minister_party = "P2050"; education_minister = "Kotula"; education_minister_party = "NL"; family_minister = "Dziemanowicz-Bąk"; family_minister_party = "NL"; justice_minister = "Śliz"; justice_minister_party = "P2050"; defense_minister = "Zalewski"; defense_minister_party = "P2050"; infrastructure_minister = "Stożek"; infrastructure_minister_party = "Razem"; foreign_minister = "Pełczyńska-Nałęcz"; foreign_minister_party = "P2050"; tech_minister = "Gramatyka"; tech_minister_party = "P2050";
+
+We have enough votes to form a big tent government consisting of KO, Poland 2050, People's Party, New Left and Razem.
+
+Who should be the chancellor?
+
+- @trzaskowski
+- @sikorski
+- @tusk
+- @czarzasty
+- @holownia
 
 @temp
 title: Rudolf Breitscheid for Chancellor
