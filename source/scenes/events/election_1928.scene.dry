@@ -384,7 +384,7 @@ Who should be the chancellor?
 title: We can form a coalition of all parties open to cooperation.
 subtitle: Razem + NL + KO + P2050 + PSL ([+ democratic_coalition +]%)
 unavailable-subtitle: Razem + NL + KO + P2050 + PSL ([+ democratic_coalition +]%) - [? if razem_relation < 50: We do not have good enough relations with the Together Party. ?] [? if nl_relation < 40: We do not have good enough relations with the New Left. ?] [? if p2050_relation < 30: We do not have good enough relations with Poland 2050. ?] [? if psl_relation < 50: We do not have good enough relations with the People's Party. ?]
-view-if: leftist_coalition >= 50
+view-if: democratic_coalition >= 50
 choose-if: razem_relation >= 50 and nl_relation >= 40 and p2050_relation >= 30 and psl_relation >= 50
 on-arrival: leverage += 5; ko_in_government = 1; razem_in_government = 1; nl_in_government = 1; p2050_in_government = 1; psl_in_government = 1; health_minister = "Zawisza"; health_minister_party = "Razem"; finance_minister = "Sitnik"; finance_minister_party = "P2050"; education_minister = "Kotula"; education_minister_party = "NL"; family_minister = "Dziemanowicz-Bąk"; family_minister_party = "NL"; justice_minister = "Zych"; justice_minister_party = "PSL"; defense_minister = "Kosiniak-Kamysz"; defense_minister_party = "PSL"; infrastructure_minister = "Stożek"; infrastructure_minister_party = "Razem"; foreign_minister = "Pełczyńska-Nałęcz"; foreign_minister_party = "P2050"; tech_minister = "Gramatyka"; tech_minister_party = "P2050";
 
