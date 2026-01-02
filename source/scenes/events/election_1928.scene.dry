@@ -339,6 +339,7 @@ There are some potential coalition arrangements.
 - @october_coalition
 - @progressive_coalition
 - @two_way_coalition
+- @right_wing_coalition
 - @weimar_coalition
 - @grand_coalition
 - @new_grand_coalition
@@ -457,6 +458,14 @@ Who should be the chancellor?
 - @tusk
 - @holownia
 - @kosiniak
+
+@right_wing_coalition
+title: The right wing parties can form a broad nationalistic coalition.
+subtitle: PiS + KWiN + KKP ([+ right_wing_coalition +]%)
+view-if: right_wing_coalition >= 50
+on-arrival: chancellor = "Czarnek"; chancellor_party = "PiS"; pis_in_government = 1; kwin_in_government = 1; kkp_in_government = 1; health_minister = "Berkowicz"; health_minister_party = "KWiN"; finance_minister = "Mentzen"; finance_minister_party = "KWiN"; education_minister = "Zajączkowski"; education_minister_party = "KKP"; family_minister = "Bojemska"; family_minister_party = "PiS"; justice_minister = "Ziobro"; justice_minister_party = "PiS"; defense_minister = "Wilk"; defense_minister_party = "KKP"; infrastructure_minister = "Gajadhur"; infrastructure_minister_party = "PiS"; foreign_minister = "Sykulski"; foreign_minister_party = "KKP"; tech_minister = "Pejo"; tech_minister_party = "KWiN";
+
+The right-wing parties have formed a coalition under Przemysław Czarnek's premiership, this is horrible news for Polish democracy.
 
 @temp
 title: Rudolf Breitscheid for Chancellor
