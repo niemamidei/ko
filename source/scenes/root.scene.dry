@@ -203,6 +203,7 @@ Q.psl_in_government = 0;
 Q.pis_in_government = 1;
 Q.kwin_in_government = 0;
 Q.kkp_in_government = 0;
+Q.razem_toleration = 0;
 
 Q.nl_dissent = 0;
 Q.psl_dissent = 0;
