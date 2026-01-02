@@ -385,8 +385,8 @@ Who should be the chancellor?
 
 @october_coalition
 title: We can form a coalition with the New Left, People's Party and Poland 2050. [? if razem_relation > 50: The Together Party will provide us toleration. ?]
-subtitle: NL + KO + P2050 + PSL ([+ democratic_coalition +]%)
-unavailable-subtitle: NL + KO + P2050 + PSL ([+ democratic_coalition +]%) - [? if nl_relation < 30: We do not have good enough relations with the New Left. ?] [? if p2050_relation < 30: We do not have good enough relations with Poland 2050. ?] [? if psl_relation < 40: We do not have good enough relations with the People's Party. ?]
+subtitle: NL + KO + P2050 + PSL ([+ october_coalition +]%)
+unavailable-subtitle: NL + KO + P2050 + PSL ([+ october_coalition +]%) - [? if nl_relation < 30: We do not have good enough relations with the New Left. ?] [? if p2050_relation < 30: We do not have good enough relations with Poland 2050. ?] [? if psl_relation < 40: We do not have good enough relations with the People's Party. ?]
 view-if: october_coalition >= 50 or (democratic_coalition >= 50 and razem_relation >= 50)
 choose-if:  nl_relation >= 30 and p2050_relation >= 30 and psl_relation >= 40
 on-arrival: leverage += 10; ko_in_government = 1; nl_in_government = 1; p2050_in_government = 1; psl_in_government = 1; razem_toleration = 1; health_minister = "Wolski"; health_minister_party = "NL"; finance_minister = "Sitnik"; finance_minister_party = "P2050"; education_minister = "Kotula"; education_minister_party = "NL"; family_minister = "Dziemanowicz-Bąk"; family_minister_party = "NL"; justice_minister = "Zych"; justice_minister_party = "PSL"; defense_minister = "Kosiniak-Kamysz"; defense_minister_party = "PSL"; infrastructure_minister = "Klimczak"; infrastructure_minister_party = "PSL"; foreign_minister = "Pełczyńska-Nałęcz"; foreign_minister_party = "P2050"; tech_minister = "Gramatyka"; tech_minister_party = "P2050";
