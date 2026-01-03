@@ -358,6 +358,7 @@ There are some potential coalition arrangements.
 - @blue_coalition
 - @far_right_coalition
 - @pis_majority
+- @historical_coalition
 - @weimar_coalition
 - @grand_coalition
 - @new_grand_coalition
@@ -499,6 +500,17 @@ view-if: far_right_coalition >= 50
 on-arrival: in_far_right_coalition = 1; chancellor = "Czarnek"; chancellor_party = "PiS"; pis_in_government = 1; kkp_in_government = 1; health_minister = "Sielańczyk"; health_minister_party = "KKP"; finance_minister = "Fritz"; finance_minister_party = "KKP"; education_minister = "Zajączkowski"; education_minister_party = "KKP"; family_minister = "Bojemska"; family_minister_party = "PiS"; justice_minister = "Ziobro"; justice_minister_party = "PiS"; defense_minister = "Wilk"; defense_minister_party = "KKP"; infrastructure_minister = "Gajadhur"; infrastructure_minister_party = "PiS"; foreign_minister = "Sykulski"; foreign_minister_party = "KKP"; tech_minister = "Maląg"; tech_minister_party = "PiS";
 
 The right-wing parties have formed a coalition under Przemysław Czarnek's premiership, this is horrible news for Polish democracy.
+
+@historical_coalitoin
+title: PiS and KO can form a government together.
+subtitle: KO + PiS ([+ historical_coalition +]%)
+unavailable-subtitle: KO + PiS ([+ historical_coalition +]%) - [? if pis_relation < 70: PiS is unwilling to cooperate with us in a coalition which might doom the current two-party system. ?]
+view-if: historical_coalition >= 50
+choose-if: pis_relation >= 70
+on-arrival: in_historical_coalition = 1; chancellor = "Morawiecki"; chancellor_party = "PiS"; pis_in_government = 1; health_minister = "Sójka"; health_minister_party = "PiS"; finance_minister = "Kosztowniak"; finance_minister_party = "PiS"; education_minister = "Czarnek"; education_minister_party = "PiS"; family_minister = "Bojemska"; family_minister_party = "PiS"; justice_minister = "Ziobro"; justice_minister_party = "PiS"; defense_minister = "Błaszczak"; defense_minister_party = "PiS"; infrastructure_minister = "Gajadhur"; infrastructure_minister_party = "PiS"; foreign_minister = "Szynkowski vel Sęk"; foreign_minister_party = "PiS"; tech_minister = "Maląg"; tech_minister_party = "PiS";
+go-to: ministries
+
+We have somehow persuaded PiS to form a coalition with us, this is an earthquake in Polish politics. What might've seemed possible in 2005 after both parties ran together in local elections three years prior, was currently seen as impossible. Two parties which rivaled each other for decades have now formed a coalition. Matuesz Morawiecki who had ties to Donald Tusk's government in the early 2010's has been selected prime minister as a compromise candidate.
 
 @pis_majority
 title: PiS can form a majority government
