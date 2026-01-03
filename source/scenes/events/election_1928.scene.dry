@@ -142,6 +142,7 @@ Q.blue_coalition = Q.pis_r + Q.kwin_r;
 Q.far_right_coalition = Q.pis_r + Q.kkp_r;
 Q.historical_coalition = Q.ko_r + Q.pis_r;
 Q.libright_coalition = Q.ko_r + Q.p2050_r + Q.psl_r + Q.kwin_r;
+Q.polish_interests_coalition = Q.pis_r + Q.psl_r + Q.kwin_r;
 
 if (Q.kpd_relation >= 30) {
     Q.weimar_coalition += Q.sapd_r;
@@ -1100,9 +1101,11 @@ If we do not at least "tolerate" the government, there will be new elections in 
 
 
 @new_elections
+title: A government will not be formed, the next elections will be called in six months.
+view-if: right_wing_coalition < 50 and blue_coalition < 50 and far_right_coalition < 50 and (polish_interests_coalition < 50 and psl_relation < 30)
 on-arrival: {!
-Q.next_election_month = Q.month + 3;
-Q.next_election_time = Q.time + 3;
+Q.next_election_month = Q.month + 6;
+Q.next_election_time = Q.time + 6;
 if (Q.next_election_month > 12) {
     Q.next_election_month -= 12;
     Q.next_election_year = Q.year + 1;
@@ -1156,9 +1159,9 @@ if (Q.far_right_coalition >= 50) {
 }
 !}
 
-There is no path to a workable Reichstag majority or minority government. The next elections are set for [+ next_election_month : month +] [+ next_election_year +].
+There is no path to a workable parliamentary majority or minority government. The next elections are set for [+ next_election_month : month +] [+ next_election_year +].
 
-The people's faith in democracy is shaken by this ordeal. Of course, the Nazis are exploiting the instability to claim that democracy is unworkable, and that Germany needs a strong leader.
+The people's faith in democracy is shaken by this ordeal. Of course, the right-wing is exploiting the instability to claim that our party is unable to govern, and that Germany needs a strong leader.
 
 
 @toleration_bruning
