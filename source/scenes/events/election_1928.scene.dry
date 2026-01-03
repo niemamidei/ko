@@ -356,6 +356,7 @@ There are some potential coalition arrangements.
 - @two_way_coalition
 - @right_wing_coalition
 - @blue_coalition
+- @far_right_coalition
 - @weimar_coalition
 - @grand_coalition
 - @new_grand_coalition
@@ -491,6 +492,14 @@ on-arrival: in_blue_coalition = 1; chancellor = "Czarnek"; chancellor_party = "P
 
 The right-wing parties have formed a coalition under Przemysław Czarnek's premiership, this is horrible news for Polish democracy.
 
+@far_right_coalition
+title: PiS and KKP can form a majority government.
+subtitle: PiS + KKP ([+ far_right_coalition +]%)
+view-if: far_right_coalition >= 50
+on-arrival: in_far_right_coalition = 1; chancellor = "Czarnek"; chancellor_party = "PiS"; pis_in_government = 1; kkp_in_government = 1; health_minister = "Sielańczyk"; health_minister_party = "KKP"; finance_minister = "Fritz"; finance_minister_party = "KKP"; education_minister = "Zajączkowski"; education_minister_party = "KKP"; family_minister = "Bojemska"; family_minister_party = "PiS"; justice_minister = "Ziobro"; justice_minister_party = "PiS"; defense_minister = "Wilk"; defense_minister_party = "KKP"; infrastructure_minister = "Gajadhur"; infrastructure_minister_party = "PiS"; foreign_minister = "Sykulski"; foreign_minister_party = "KKP"; tech_minister = "Maląg"; tech_minister_party = "PiS";
+
+The right-wing parties have formed a coalition under Przemysław Czarnek's premiership, this is horrible news for Polish democracy.
+
 @temp
 title: Rudolf Breitscheid for Chancellor
 subtitle: Breitscheid is viewed as friendlier towards the left of the SPD.
@@ -578,17 +587,6 @@ In response to the KPD's entrance into the government, the right-wing immediatel
 The Center manages to diffuse some of the hostility from the Reichswehr and the Stahlhelm, but fail to prevent the outbreak of fighting. We are forced to fight on the same side as the KPD, whether we want to or not.
 
 - @civil_war: A civil war, then.
-
-
-
-@far_right_coalition
-title: Far-right coalition
-subtitle: NSDAP + DNVP ([+ far_right_coalition +]%)
-view-if: far_right_coalition >= 50
-go-to: far_right_win if (year >= 1932 or nsdap_r >= 44) and president != "Braun"; far_right_fail if (year < 1932 and nsdap_r < 44) and president != "Braun"; far_right_braun if president == "Braun"
-priority: 2
-
-There are enough votes for the Nazis and the DNVP to form a coalition. [+ nsdap_leader +] has made his participation in government contingent on being appointed chancellor. It is up to President [+ president +] to decide.
 
 @far_right_win
 on-arrival: chancellor = nsdap_leader; chancellor_party = "NSDAP"
