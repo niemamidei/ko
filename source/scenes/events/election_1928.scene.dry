@@ -179,6 +179,7 @@ Q.reichswehr_minister_party = 'I';
 Q.economic_minister_party = Q.ddp_name;
 Q.finance_minister_party = 'DVP';
 Q.agriculture_minister_party = 'Z';
+Q.after_election = 0;
 
 // reset KPD goals
 Q.kpd_goals_seen = 0;
