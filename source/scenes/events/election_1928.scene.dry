@@ -357,6 +357,7 @@ There are some potential coalition arrangements.
 - @right_wing_coalition
 - @blue_coalition
 - @far_right_coalition
+- @pis_majority
 - @weimar_coalition
 - @grand_coalition
 - @new_grand_coalition
@@ -499,6 +500,14 @@ view-if: far_right_coalition >= 50
 on-arrival: in_far_right_coalition = 1; chancellor = "Czarnek"; chancellor_party = "PiS"; pis_in_government = 1; kkp_in_government = 1; health_minister = "Sielańczyk"; health_minister_party = "KKP"; finance_minister = "Fritz"; finance_minister_party = "KKP"; education_minister = "Zajączkowski"; education_minister_party = "KKP"; family_minister = "Bojemska"; family_minister_party = "PiS"; justice_minister = "Ziobro"; justice_minister_party = "PiS"; defense_minister = "Wilk"; defense_minister_party = "KKP"; infrastructure_minister = "Gajadhur"; infrastructure_minister_party = "PiS"; foreign_minister = "Sykulski"; foreign_minister_party = "KKP"; tech_minister = "Maląg"; tech_minister_party = "PiS";
 
 The right-wing parties have formed a coalition under Przemysław Czarnek's premiership, this is horrible news for Polish democracy.
+
+@pis_majority
+title: PiS can form a majority government
+subtitle: PiS ([+ pis_r +]%)
+view-if: pis_r >= 50
+on-arrival: in_pis_majority = 1; chancellor = "Morawiecki"; chancellor_party = "PiS"; pis_in_government = 1; health_minister = "Sójka"; health_minister_party = "PiS"; finance_minister = "Kosztowniak"; finance_minister_party = "PiS"; education_minister = "Czarnek"; education_minister_party = "PiS"; family_minister = "Bojemska"; family_minister_party = "PiS"; justice_minister = "Ziobro"; justice_minister_party = "PiS"; defense_minister = "Błaszczak"; defense_minister_party = "PiS"; infrastructure_minister = "Gajadhur"; infrastructure_minister_party = "PiS"; foreign_minister = "Szynkowski vel Sęk"; foreign_minister_party = "PiS"; tech_minister = "Maląg"; tech_minister_party = "PiS";
+
+The Law and Justice party is able to govern alone, this is horrible news for Polish democracy.
 
 @temp
 title: Rudolf Breitscheid for Chancellor
@@ -1369,6 +1378,7 @@ title: Donald Tusk becomes Prime Minister.
 subtitle: Selecting the most experienced and well-known politican seems like an obvious choice, however his choice may dissapoint the younger electorate.
 view-if: president != "Tusk"
 on-arrival: chancellor = "Tusk"
+go-to: ministries
 
 Donald Tusk has become prime minister.
 
@@ -1377,6 +1387,7 @@ title: Donald Tusk becomes Prime Minister.
 subtitle: Radek
 view-if: president != "Sikorski"
 on-arrival: chancellor = "Sikorski"
+go-to: ministries
 
 Radosław Sikorski has become prime minister. This will get us more support from the centre-right parties.
 
@@ -1385,6 +1396,7 @@ title: Donald Tusk becomes Prime Minister.
 subtitle: Trzask
 view-if: president != "Trzaskowski"
 on-arrival: chancellor = "Trzaskowski"
+go-to: ministries
 
 Rafał Trzaskowski has become prime minister. This will get us more support from the left-wing parties.
 
